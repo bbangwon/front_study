@@ -2,3 +2,17 @@
   text-align: center;
   padding-top: 50px;
 }
+
+button {
+  width: 120px;
+  background-color: #00ffff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 25px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s;
+}
