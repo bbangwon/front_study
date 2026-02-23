@@ -16,4 +16,10 @@ window.onload = () => {
       alert("저장된 데이터가 없습니다.");
     }
   });
+
+  const btnRemoveLocalData = document.querySelector(".btnRemoveLocalData");
+  btnRemoveLocalData.addEventListener("click", () => {
+    localStorage.removeItem("userid");
+    inputData.value = "";
+  });
 };
