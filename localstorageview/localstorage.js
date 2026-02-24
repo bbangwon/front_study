@@ -1,25 +1,12 @@
 window.onload = () => {
-  const btnSetLocalData = document.querySelector(".btnSetLocalData");
-  const inputData = document.querySelector("input");
+  const btnAllView = document.querySelector(".btnAllView");
 
-  btnSetLocalData.addEventListener("click", () => {
-    localStorage.setItem("userid", inputData.value);
-    inputData.value = "";
-  });
+  btnAllView.addEventListener("click", () => {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const value = localStorage.getItem(key);
 
-  const btnGetLocalData = document.querySelector(".btnGetLocalData");
-  btnGetLocalData.addEventListener("click", () => {
-    const userid = localStorage.getItem("userid");
-    if (userid) {
-      inputData.value = userid;
-    } else {
-      alert("저장된 데이터가 없습니다.");
+      console.log(key + "," + value);
     }
-  });
-
-  const btnRemoveLocalData = document.querySelector(".btnRemoveLocalData");
-  btnRemoveLocalData.addEventListener("click", () => {
-    localStorage.removeItem("userid");
-    inputData.value = "";
   });
 };
