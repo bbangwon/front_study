@@ -1,0 +1,28 @@
+.title {
+  text-align: center;
+  padding-top: 50px;
+}
+
+button {
+  width: 300px;
+  background-color: #00ffff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 25px;
+  float: right;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s;
+}
+
+.btn {
+  background-color: #000000;
+  color: white;
+  width: 150px;
+  margin-bottom: 0px;
+  float: none;
+}
