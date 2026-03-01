@@ -20,5 +20,13 @@ window.onload = () => {
 
     const newText3 = document.createTextNode("Reading");
     newCell3.appendChild(newText3);
+
+    //row 개수(thead 포함)
+    const tbl = document.getElementById("myTable");
+    console.log(`thead 포함 row 개수: ${tbl.rows.length}`);
+
+    //셀 개수
+    const cl = tbl.rows[0].cells.length;
+    console.log(`첫 번째 row의 셀 개수: ${cl}`);
   });
 };
