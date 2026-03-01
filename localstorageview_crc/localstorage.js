@@ -3,6 +3,7 @@ window.onload = () => {
 
   btnCrc.addEventListener("click", () => {
     let hTbody = document.querySelector("#htmlTbody");
+
     const newRow = hTbody.insertRow();
     const newCell0 = newRow.insertCell();
     const newCell1 = newRow.insertCell();
@@ -23,10 +24,15 @@ window.onload = () => {
 
     //row 개수(thead 포함)
     const tbl = document.getElementById("myTable");
-    console.log(`thead 포함 row 개수: ${tbl.rows.length}`);
+    let r = tbl.rows.length - 1;
+    console.log(`tbody row 개수: ${r}`);
 
     //셀 개수
     const cl = tbl.rows[0].cells.length;
     console.log(`첫 번째 row의 셀 개수: ${cl}`);
+
+    for (let c = 0; c < cl; c++) {
+      hTbody.rows[r - 1].cells[c].innerHTML = `[${r - 1}] [${c}]`;
+    }
   });
 };
