@@ -26,6 +26,18 @@ const delCookie = function (cname) {
   alert("쿠키를 삭제했습니다.");
 };
 
+const allDelCookies = function () {
+  const cookies = document.cookie.split("; ");
+  const expiration = "Sat, 01 Jan 2000 00:00:00 GMT";
+
+  for (let i = 0; i < cookies.length; i++) {
+    const cookieName = cookies[i].split("=")[0];
+    document.cookie = `${cookieName}=; expires=${expiration};`;
+  }
+
+  alert("모든 쿠키를 삭제했습니다.");
+};
+
 const form = document.getElementById("form");
 form.addEventListener("submit", function () {
   event.preventDefault();
